@@ -1,0 +1,323 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+h2{
+  font-family: "ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin: auto;
+  margin-top: 6vh;
+  color: rgb(33, 33, 33);
+  text-shadow: 0 0 2px #928e8e;
+  text-align: center;
+  cursor: pointer;
+  width: 50vw;
+}
+h2:hover{
+  color: white;
+  background-color: black;
+}
+
+@font-face{
+  font-family: Roboto;
+  src: url(Roboto/Roboto-Bold.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #dce4e8;
+  }
+
+.topnav{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    margin-top: 3vh;
+    width: 50%;
+}
+/* 条目的选项css+hover效果 */
+.topnav .button {
+    background-color: rgba(127, 151, 141, 0.4);
+    text-align: center;
+    margin: 0px;
+    height:18px;
+    padding: 7px;
+    font-size: 0.8rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-family: Roboto;
+    font-style: normal;
+    box-shadow: 0px 0px 1px rgba(127, 151, 141, 1);
+  }
+.topnav .button:hover{
+    animation: Hover, 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes Hover{
+  from{
+    background-color: rgba(127, 151, 141,0.4);
+    color: black;
+  }
+  to{
+    background-color: rgb(0, 0, 0, 0.9);
+    color: rgb(238, 236, 236);
+  }
+}
+
+/* 所有作品大容器 */
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    margin-top: 10vh;
+    /* background-color: #928e8e; */
+}
+/* 单个作品容器 */
+.container{
+    position: relative;
+    height: 170px;
+    margin: 10px;
+    /* background-color: antiquewhite; */
+    box-shadow: 0px 0px 3px #cdd4d7;
+    flex-grow: 0;
+    justify-content: center;
+}
+/* 容器中的作品图片 */
+.image{
+    height: 100%;
+    padding: 0;
+}
+
+/*在作品上hover的效果 */
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.overlay:hover{
+  animation: Overlay 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Overlay{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.8;
+  }
+}
+
+.text{
+  color: white;
+  font-size: 1.4vw;
+  line-height: 3vh;
+  font-family: Rockwell;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* 手机小屏幕排版调整 */
+@media screen and (max-width: 480px) {
+  .container{
+    height: 150px;
+}
+}
+
+
+/* About页面 */
+.bigDiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    margin-top: 10vh;
+    /* background-color: #928e8e; */
+}
+.self{
+    float: left;
+    width: 300px;
+    height:100%;
+}
+.intro{
+    float: right;
+    width: 320px;
+    padding: 2rem;
+    padding-left: 3.5rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-family: Rockwell;
+    font-weight: 400;
+}
+.selfContainer{
+  position: relative;
+}
+
+@media screen and (max-width: 1450px) {
+  .intro{
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 2rem;
+    width: 300px;
+    padding-left: 3rem;
+}
+}
+@media screen and (max-width: 1350px) {
+  .intro{
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    width: 260px;
+    padding: 2rem;
+    padding-left: 3rem;
+}
+}
+@media screen and (max-width: 1250px) {
+  .intro{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 230px;
+    padding: 1rem;
+    padding-left: 2.5rem;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  .bigDiv{
+    justify-content: center;
+}
+  .self{
+    float: none;
+    width: 300px;
+}
+  .intro{
+    float: none;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 300px;
+    padding: 1rem;
+}
+}
+@media screen and (max-width: 700px) {
+  .bigDiv{
+    width: 59vw;
+}
+  .self{
+    float: none;
+    width: 260px;
+}
+  .intro{
+    float: none;
+    width: 300px;
+    padding: 0rem;
+    padding-top: 1rem;
+}
+}
+
+
+/* Contact页面 */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  font-family: Roboto;
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  font-family: Roboto;
+  background-color: rgba(127, 151, 141,0.4);
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  box-shadow: 0px 0px 1px rgba(127, 151, 141, 1);
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  color: white;
+  background-color: #000000;
+}
+
+/* Add a background color and some padding around the form */
+.contactContainer {
+  top: 50%;
+  left: 46%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  margin-top: 8vh;
+  width: 40vw;
+  font-size: 1rem;
+  font-family: Rockwell;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow:0px 0px 0px;
+  padding: 10px;
+}
+
+
+/* Resume页面 */
+hr{
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  margin-top: 2rem;
+  width: 50vw;
+  height:1.8px;
+  border-width:0;
+  color:gray;
+  background-color: rgba(127, 151, 141,0.4);
+  box-shadow: 0px 0px 1px rgba(127, 151, 141, 1);
+}
+.R{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45vw;
+    top: 20%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+}
+.Resume{
+    width: 100%; 
+}
+
+@media screen and (max-width: 700px) {
+   .Resume{
+    width: 180%;
+}
+}

@@ -1,0 +1,280 @@
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin: auto;
+  margin-top: 6vh;
+  color: rgb(33, 33, 33);
+  text-shadow: 0 0 2px #928e8e;
+  text-align: center;
+  cursor: pointer;
+  width: 50vw;
+}
+
+h2:hover {
+  color: white;
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  background-color: #dce4e8;
+}
+
+hr {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  margin-top: 2rem;
+  width: 70vw;
+  height: 1.8px;
+  border-width: 0;
+  color: gray;
+  background-color: rgba(127, 151, 141, 0.4);
+  box-shadow: 0px 0px 1px rgba(127, 151, 141, 1);
+}
+
+.bigDiv {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70vw;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  /* background-color: #928e8e; */
+}
+
+.intro {
+  float: right;
+  width: 42%;
+  padding: 1.9rem;
+  padding-left: 4rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-family: Rockwell;
+  font-weight: 400;
+  /* background-color: antiquewhite; */
+}
+
+.title {
+  font-family: "ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  /* text-align: center; */
+}
+
+.image {
+  height: 370px;
+  box-shadow: 0px 0px 3px #cdd4d7;
+  padding: 0;
+}
+
+section {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  justify-content: center;
+  /* background-color: #928e8e; */
+}
+
+.page {
+  margin: 0px;
+  padding: 0px;
+  width: 21rem;
+  height: 100%;
+  font-size: 0.8rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #dce4e8;
+}
+
+.container{
+  position: relative;
+  height: 370px;
+  margin: 10px;
+  /* background-color: antiquewhite; */
+  box-shadow: 0px 0px 3px #cdd4d7;
+  flex-grow: 0;
+  justify-content: center;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  width: 100%;
+  opacity: 0;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.overlay:hover{
+  animation: Overlay 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes Overlay{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.8;
+  }
+}
+
+.text{
+  color: rgb(0, 0, 0);
+  font-size: 1.4vw;
+  line-height: 3vh;
+  font-family: Rockwell;
+  font-weight: 700;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hr1 {
+  margin-top: 32rem;
+}
+
+.subtitle1 {
+  font-family: "ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  margin-top: 35rem;
+}
+
+.block1{
+  width: 30%;
+  margin-top: 40rem;
+}
+
+.hr2 {
+  margin-top: 49rem;
+}
+
+.subtitle2 {
+  font-family: "ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  margin-top: 52rem;
+}
+
+.block2{
+  width: 80%;
+  margin-top: 56rem;
+}
+
+
+
+@media screen and (max-width: 1450px) {
+  .intro {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    padding: 1.8rem;
+    width: 40%;
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .intro {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    width: 36%;
+    padding: 1.8rem;
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .bigDiv {
+    justify-content: center;
+  }
+
+  .cover {
+    float: none;
+    width: 100%;
+  }
+
+  .intro {
+    float: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    width: 70%;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .hr1 {
+    margin-top: 41rem;
+  }
+
+  .subtitle1 {
+    font-size: 0.9rem;
+    margin-top: 44rem;
+  }
+
+  .block1 {
+    margin-top: 48rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro {
+    float: none;
+    width: 80%;
+    padding: 0rem;
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .intro {
+    float: none;
+    width: 90%;
+    padding: 0rem;
+    padding-top: 2rem;
+  }
+
+  .hr1 {
+    margin-top: 43rem;
+  }
+
+  .subtitle1 {
+    font-size: 0.9rem;
+    margin-top: 46rem;
+  }
+
+  .block1 {
+    margin-top: 50rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    width: 100%;
+  }
+}

@@ -27,9 +27,9 @@ body {
 }
 
 hr {
-  left: 50%;
+  /* left: 50%;
   position: absolute;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%); */
   margin-top: 2rem;
   width: 70vw;
   height: 1.8px;
